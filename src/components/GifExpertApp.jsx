@@ -6,11 +6,7 @@ import { GifGrid } from "./GifGrid";
 // Componente global de la aplicación
 const GifExpertApp = () => {
   // El estado no se puede condicionar con IF's
-  const [categories, setCategories] = useState([
-    "Dragon Ball",
-    "Pokemón",
-    "Ranma 1/2",
-  ]);
+  const [categories, setCategories] = useState([]);
 
   const addCategory = (newValue) => {
     // Validar que el nuevo valor no se encuentre previamente en el estado de categorias
@@ -18,7 +14,7 @@ const GifExpertApp = () => {
 
     // En react esta PROHIBIDO mutar el estado.
     // Se genera un nuevo arreglo, con los valores actuales en el estado, sumado al nuevo valor
-    setCategories([...categories, newValue]);
+    setCategories([newValue, ...categories]);
   };
 
   return (
@@ -33,7 +29,7 @@ const GifExpertApp = () => {
       {/* Listado de Gifts */}
       {/* Iterar e imprimir un listado de elementos */}
       {categories.map((category, index) => (
-        <GifGrid key={index} category={category} />
+        <GifGrid key={category + index} category={category} />
       ))}
 
       {/* Gift Item */}
