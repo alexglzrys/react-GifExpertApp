@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import GiftExpertApp from "./GiftExpertApp";
+import GifExpertApp from './components/GifExpertApp';
 
 // Estilos globales de la aplicación
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  // Cuando se trabaja con el modo estricto, es normal que el ciclo de vida se ejecute 2 veces por cuestiones de inspección de React. Pero esto se anula en producción cuando se genera el builder final. No hay necesidad de remover.
   <React.StrictMode>
-    <GiftExpertApp />
+    <GifExpertApp />
   </React.StrictMode>
 )
