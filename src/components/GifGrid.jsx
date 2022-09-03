@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs";
+import { GifItem } from "./GifItem";
 
 // Sniped para crear el cuerpo de un componente funcional - rafc
 export const GifGrid = ({ category }) => {
@@ -19,9 +20,10 @@ export const GifGrid = ({ category }) => {
   return (
     <div>
       <h4>{category}</h4>
-      <ol>
-        {images.map(({id, title}) => <li key={id}>{title}</li>)}
-      </ol>
+      <div className="card-grid">
+        {/* Tarjetas con la información de cada gif localizado referente a la categoría seleccionada */}
+        {images.map(image => <GifItem key={image.id} {...image}/>)}
+      </div>
     </div>
   );
 };
