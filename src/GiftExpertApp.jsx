@@ -1,8 +1,15 @@
 // Componente global de la aplicación
 const GiftExpertApp = () => {
-    return (
-        <h1>Gift Expert App</h1>
-    );
-}
+  return (
+    <>
+      {/* Titulo */}
+      <h1>Gift Expert App</h1>
+
+      {/* Buscador */}
+      {/* Listado de Gifts */}
+      {/* Gift Item */}
+    </>
+  );
+};
 
 export default GiftExpertApp;
