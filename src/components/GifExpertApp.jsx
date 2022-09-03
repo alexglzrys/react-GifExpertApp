@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { AddCategory } from "./AddCategory";
-import { GifGrid } from "./GifGrid";
+// Nos ahorramos 2 importaciones separadas, haciendo uso de nuestro archivo de barril.
+import { AddCategory, GifGrid } from "./index";
 
 
 // Componente global de la aplicación
-const GifExpertApp = () => {
+export const GifExpertApp = () => {
   // El estado no se puede condicionar con IF's
   const [categories, setCategories] = useState([]);
 
@@ -37,4 +37,3 @@ const GifExpertApp = () => {
   );
 };
 
-export default GifExpertApp;

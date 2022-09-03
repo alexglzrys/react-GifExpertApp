@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import GifExpertApp from './components/GifExpertApp';
+import { GifExpertApp } from './components';
 
 // Estilos globales de la aplicación
 import './styles.css';

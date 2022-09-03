@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFetchGifs } from "../hooks/useFetchGifs";
-import { GifItem } from "./GifItem";
-import { Loading } from "./Loading";
+// Nos ahorramos 2 importaciones separadas, haciendo uso de nuestro archivo de barril.
+import { GifItem, Loading } from "./index";
 
 // Sniped para crear el cuerpo de un componente funcional - rafc
 export const GifGrid = ({ category }) => {
